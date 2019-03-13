@@ -20,6 +20,7 @@ import django.contrib.auth.urls
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
+from django.contrib.auth import views as auth_views
 
 from accounts.views import ShibbolethLogin
 from accounts.views import ShibbolethLogout
@@ -33,8 +34,9 @@ urlpatterns = [
 	url(r'^', include('pages.urls')),
     url(r'^accounts/', include('django_registration.backends.activation.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),
-    url(r'^reset/',    include('password_reset.urls')),
+    # url(r'^reset/',    include('password_reset.urls')),
     url(r'^profile/',  include('accounts.urls')),
+    # url(r'^login$', auth_views.LoginView, name='login'),
 #    url(r'^login/$',                ShibbolethLogin.as_view(),       name='shib_login'),
 #    url(r'^logout/$',               ShibbolethLogout.as_view(),      name='shib_logout'),
 #    url(r'^discovery/$',            ShibbolethDiscovery.as_view(),   name='shib_discovery'),
