@@ -34,8 +34,11 @@ urlpatterns = [
 	url(r'^', include('pages.urls')),
     url(r'^accounts/', include('django_registration.backends.activation.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),
+    # url(r'^accounts/password_reset/', auth_views.PasswordChangeView.as_view()),
+    # url(r'^accounts/password_reset/done', auth_views.PasswordChangeDoneView.as_view()),
     # url(r'^reset/',    include('password_reset.urls')),
     url(r'^profile/',  include('accounts.urls')),
+
     # url(r'^login$', auth_views.LoginView, name='login'),
 #    url(r'^login/$',                ShibbolethLogin.as_view(),       name='shib_login'),
 #    url(r'^logout/$',               ShibbolethLogout.as_view(),      name='shib_logout'),
