@@ -1,5 +1,5 @@
 confusable-homoglyphs==3.0.0
-Django==1.11.17
+Django==1.11.29
 django-bootstrap3==8.2.3
 django-codemirror-widget==0.4.1
 django-password-reset==1.0
